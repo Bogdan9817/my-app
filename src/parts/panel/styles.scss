@@ -1,0 +1,111 @@
+@import '../../variables/colors.scss';
+
+.panel {
+    width: fit-content;
+    border: 1px solid $primary1;
+    margin: auto;
+
+    .currency {
+        &-row {
+            display: flex;
+            border-bottom: 1px solid $primary1;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        &-block {
+            width: 100px;
+            display: flex;
+            border-right: 1px solid $primary1;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 14px;
+            padding: 10px 0;
+            &:last-child {
+                border-right: none;
+            }
+
+            >.hint {
+                position: absolute;
+                top:0;
+                right:0;
+                cursor: pointer;
+            }
+
+            .none {
+                display: none;
+            }
+
+            &:hover {
+                .hint {
+                    opacity: 1;
+                    transition: opacity ease-in-out .3s;
+                }
+            }
+            
+            .currency {
+                &-form {
+                    position: absolute;
+                    width: 100vw;
+                    height: 100vh;
+                    background: rgba($color: #000000, $alpha: 0.8);
+                    align-items: center;
+                    padding: 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    >div{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 10px;
+                        z-index: 20;
+                        width: 200px;
+                        height: 200px;
+                        background: $accent2;
+                    }
+                    .error {
+                        margin: 5px auto;
+                        font-size: smaller;
+                        color: $error-color;
+                    }
+                }
+                
+                &-btns {
+                    width: 100%;
+                    padding-top: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            &-block {
+                width: 200px;
+                height: 170px;
+                font-size: larger;
+
+                >span.hint {
+                    opacity: 0;
+                    transition: opacity ease-in-out .3s;
+                }
+                .currency-form {
+                    position: relative;
+                    background: none;
+                    width: 100%;
+                    height: 100%;
+                    >div {
+                        background: none;
+                        width: 100%;
+                        height: 100%;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        
+    }
+}

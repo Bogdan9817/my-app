@@ -1,0 +1,55 @@
+@import "./variables/colors.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, body>div, .App {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: $accent2;
+  color: $primary1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header, footer {
+  height: 100px;
+  margin: 0;
+  text-align: center;
+  padding-top: 40px;
+}
+
+header {
+  border-bottom: 1px solid $primary1;
+  margin-bottom: 10px;
+}
+
+footer {
+  border-top: 1px solid $primary1;
+  margin-top: 10px;
+}
+
+.error-message { 
+  color: $error-color;
+  font-size: 24px;
+  text-align: center;
+}

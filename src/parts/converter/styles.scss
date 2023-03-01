@@ -1,0 +1,36 @@
+@import '../../variables/colors.scss';
+
+.converter {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-swap {
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+    
+    @media screen and (min-width: 768px ){
+        flex-direction: row;
+        &-swap {
+            rotate: 90deg;
+            margin: auto;
+        }
+    }
+
+   
+
+    &-block {
+        display: flex;
+
+        input[type="number"]{
+            outline: none;
+            background: none;
+            border: none;
+            border-bottom: 1px solid $primary1;
+        }
+    }
+}
