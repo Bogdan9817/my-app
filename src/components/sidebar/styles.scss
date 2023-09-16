@@ -1,0 +1,18 @@
+.sidebar__menu-nav {
+    display: flex;
+    justify-content: center;
+    h4 {
+        position: relative;
+        padding-left: 24px;
+        cursor: pointer;
+    }
+    h4::before {
+        left: 0;
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: 24px;
+        content: "";
+        background: url('/static/icons/Heart.svg');
+    }
+}
